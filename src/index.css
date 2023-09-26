@@ -37,12 +37,14 @@
 
 /*TABLE*/
 .table {
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
+  padding-top: 42px;
   width: 90%;
   border: 1px solid lightgray;
   border-radius: 10px;
@@ -51,18 +53,21 @@
   box-shadow: 10px 10px 105px -45px rgba(0, 0, 0, 0.75);
 }
 .table__wrapper{
-  width: 100%;
+  position: fixed;
+  top: 2%;
+  width: 85%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .table__header {
   font-size: 24px;
-  margin-bottom: 24px;
 }
 .table__input{
   width: 25%;
   height: 30px;
+  padding-left: 6px;
+  font-size: 14px;
 }
 
 .rdt_TableHeadRow {
@@ -90,6 +95,19 @@
   -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
   padding: 24px;
+}
+.modal__wrapper{
+  position: relative;
+}
+.modal__btn{
+  position: absolute;
+  font-size: 24px;
+  padding: 4px;
+  border: none;
+  background-color: transparent;
+  top: -3%;
+  right: 0;
+  cursor: pointer;
 }
 
 .shipment__details {
