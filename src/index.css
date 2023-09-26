@@ -72,6 +72,9 @@
   border-top-left-radius: 20px;
   font-size: 20px;
 }
+.rdt_Table{
+  height: 800px !important;
+}
 
 /*MODAL*/
 .modal {

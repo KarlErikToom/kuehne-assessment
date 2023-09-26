@@ -85,7 +85,7 @@ order.orderNo.toLowerCase().includes(searchQuery.toLocaleLowerCase()))
     <div className="table">
       <div className="table__wrapper">
         <h2 className="table__header">Shipments Table</h2>
-        <input type="text" className="table__input" value={searchQuery} onChange={handleSearchInputChange} />
+        <input type="text" className="table__input" placeholder="Search by orderNo" value={searchQuery} onChange={handleSearchInputChange} />
       </div>
       <DataTable columns={columns} data={filteredOrders} pagination>
         {" "}
