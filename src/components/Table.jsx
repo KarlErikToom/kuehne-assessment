@@ -8,7 +8,7 @@ function Table() {
   const [orders, setOrders] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("")
   async function getShipments() {
     const { data } = await axios.get("http://localhost:3000/shipments.txt");
     setOrders(data);
@@ -22,32 +22,26 @@ function Table() {
     {
       name: "orderNo",
       selector: (row) => row.orderNo,
-      compact: true,
     },
     {
       name: "date",
       selector: (row) => row.date,
-      compact: true,
     },
     {
       name: "customer",
       selector: (row) => row.customer,
-      compact: true,
     },
     {
       name: "trackingNo",
       selector: (row) => row.trackingNo,
-      compact: true,
     },
     {
       name: "status",
       selector: (row) => row.status,
-      compact: true,
     },
     {
       name: "consignee",
       selector: (row) => row.consignee,
-      compact: true,
     },
     {
       name: "actions",
@@ -72,12 +66,11 @@ function Table() {
       ),
     },
   ];
-  function handleSearchInputChange(event) {
-    setSearchQuery(event.target.value);
-  }
-  const filteredOrders = orders.filter((order) =>
-    order.orderNo.toLowerCase().includes(searchQuery.toLocaleLowerCase())
-  );
+function handleSearchInputChange(event){
+  setSearchQuery(event.target.value)
+}
+const filteredOrders= orders.filter((order) =>
+order.orderNo.toLowerCase().includes(searchQuery.toLocaleLowerCase()))
   useEffect(() => {
     getShipments();
   }, []);
@@ -86,14 +79,7 @@ function Table() {
     <div className="table">
       <div className="table__wrapper">
         <h2 className="table__header">Shipments Table</h2>
-        <input
-          type="text"
-          className="table__input"
-          placeholder="Search by orderNo"
-          value={searchQuery}
-          onChange={handleSearchInputChange}
-          autoComplete="off"
-        />
+        <input type="text" className="table__input" placeholder="Search by orderNo" value={searchQuery} onChange={handleSearchInputChange} autoComplete="off" />
       </div>
       <DataTable columns={columns} data={filteredOrders} pagination>
         {" "}

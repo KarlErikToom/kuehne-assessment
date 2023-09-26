@@ -4,7 +4,7 @@ import ReactModal from "react-modal";
 
 function Modal({ isOpen, onClose, order }) {
   return (
-    <ReactModal className="modal" isOpen={isOpen} onRequestClose={onClose}>
+    <ReactModal className="modal" isOpen={isOpen} onRequestClose={onClose} closeTimeoutMS={400}>
       {order && (
           <div className="modal__wrapper">
             <h2>Shipment Details</h2>

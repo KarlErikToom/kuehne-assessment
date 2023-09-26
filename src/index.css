@@ -52,7 +52,7 @@
   -moz-box-shadow: 10px 10px 105px -45px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 105px -45px rgba(0, 0, 0, 0.75);
 }
-.table__wrapper{
+.table__wrapper {
   position: fixed;
   top: 2%;
   width: 85%;
@@ -63,7 +63,7 @@
 .table__header {
   font-size: 24px;
 }
-.table__input{
+.table__input {
   width: 25%;
   height: 30px;
   padding-left: 6px;
@@ -77,8 +77,9 @@
   border-top-left-radius: 20px;
   font-size: 20px;
 }
-.rdt_Table{
+.rdt_Table {
   height: 800px !important;
+  width: 100% !important;
 }
 
 /*MODAL*/
@@ -96,10 +97,28 @@
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
   padding: 24px;
 }
-.modal__wrapper{
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: all 400ms ease;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: translateY(-0%);
+
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  transform: translateY(-10%);
+
+}
+
+.modal__wrapper {
   position: relative;
 }
-.modal__btn{
+.modal__btn {
   position: absolute;
   font-size: 24px;
   padding: 4px;
